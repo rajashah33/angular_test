@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>
+CRM Login
+</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script type="text/javascript" src="../js/controller_login.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+<div id="firstDiv" ng-app="postserviceApp" ng-controller="postserviceCtrl"><br/>
+<div class="container">
+<center><h3>LOGIN</h3></center>
+<center>Email :	<input type="name"ng-model="email" /><br/><br/></center>
+
+<center>Password :	<input type="password" ng-model="password" /><br/><br/><center/>
+
+<center><input type="button" value="Send" ng-click="postdata(email, password)" /> <br/><br/><center/>
+<center><a href="reset_password.html">Need help?</a><br/><center/>
+
+</div><br/>
+</div>
+</body>
+</html>

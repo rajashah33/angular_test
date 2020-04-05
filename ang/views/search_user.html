@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>
+        User Details
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="../js/search_user_ctrl.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+    <div ng-app="searchUsersApp"><br />
+
+        <div class="container" ng-controller="searchUsersCtrl">
+            <div>
+                <h3>Search User</h3>
+                <h5> Get User by mobile number or email</h5>
+                Enter mobile or email : <input type="text" ng-model="email" /><br /><br />
+                <input type="button" value="Find" ng-click="searchByEmail()" /> <br /><br />
+            </div>
+
+            <div ng-hide="noUserData()">
+                <table class="a" style="width:100%">
+                    <tr>
+                        <th>Id</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>BirthDate</th>
+                        <th>Email</th>
+                        <th>Phone No.</th>
+                        <th>Password.</th>
+                        <th>Address</th>
+                        <th>Registered at</th>
+                        <th>Edit Details</th>
+
+                    </tr>
+                    <tr>
+                        <td>{{userData.id}}</td>
+                        <td>{{userData.firstName}}</td>
+                        <td>{{userData.lastName}}</td>
+                        <td>{{userData.birthDate}}</td>
+                        <td>{{userData.email}}</td>
+                        <td>{{userData.phoneNumber}}</td>
+                        <td>{{userData.password}}</td>
+                        <td>{{userData.address}}</td>
+                        <td>{{userData.createdAt}}</td>
+                        <td><input type="button" onclick="window.location.href = 'edit_user.html';" value="Edit" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h4 ng-show="msg == 'success' && noUserData() "> No User found</h4>
+                <h4 ng-hide="msg =='' || msg == 'success'"> Error &nbsp {{msg}}</h4>
+            </div>
+        </div>
+        <br />
+    </div>
+</body>
+
+</html>

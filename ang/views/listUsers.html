@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>
+ALL PRODUCTS
+</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script type="text/javascript" src="../js/controller_listUsers.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+<div ng-app="listUsersApp">
+    <div ng-controller="listUsers">
+        <table ng-init="loadUsers()" style="width:100%">
+		<caption>ALL PRODUCTS</caption>
+            <tr>
+                <th>Id</th>
+				<th>Name</th>
+				<th>BirthDate</th>
+				<th>Email</th>
+				<th>Phone No.</th>
+				<th>Address</th>
+            </tr>
+            <tr ng-repeat="application in topApps">
+                <td>{{application.id}}</td>
+				<td>{{application.name}}</td>
+				<td>{{application.birthDate}}</td>
+				<td>{{application.email}}</td>
+				<td>{{application.phoneNumber}}</td>
+				<td>{{application.address}}</td>				
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

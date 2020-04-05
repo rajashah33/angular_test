@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>
+        User Details
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="../js/search_user_ctrl.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+    <div ng-app="searchUsersApp">
+
+        <div class="container" ng-controller="searchUsersCtrl">
+            <input type="button" value="Edit" ng-click="editUser()" />
+
+            <div ng-show="check()">
+                dataService called: {{msg}}
+            </div>
+                outside:  {{myFactory.message}}
+
+        </div>
+    </div>
+</body>
+
+</html>
